@@ -1,0 +1,16 @@
+{
+  "name": "lr22-mysql",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №22: Исследование методов подключения к серверу MySQL и работы с БД",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test-all.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.3",
+    "koa": "^2.15.3",
+    "@koa/router": "^13.1.0",
+    "koa-bodyparser": "^4.4.1"
+  }
+}

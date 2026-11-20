@@ -1,10 +1,10 @@
 {
   "variant": 13,
   "analyzedPath": ".",
-  "date": "2026-11-20T10:44:36.527Z",
+  "date": "2026-11-20T12:38:13.902Z",
   "summary": {
     "totalFiles": 0,
-    "totalDirs": 19,
+    "totalDirs": 95,
     "totalSizeBytes": 0
   },
   "extensions": {
@@ -13,12 +13,12 @@
       "bytes": 4479003
     },
     ".json": {
-      "count": 12,
-      "bytes": 6550
+      "count": 14,
+      "bytes": 6675
     },
     ".js": {
       "count": 13,
-      "bytes": 1282029
+      "bytes": 1283570
     }
   },
   "top5Largest": [
@@ -36,7 +36,7 @@
     },
     {
       "path": "task5.js",
-      "size": 8390
+      "size": 9931
     },
     {
       "path": "task4.js",
@@ -49,20 +49,20 @@
       "size": 11
     },
     {
+      "path": "backup_13/file_2.json",
+      "size": 38
+    },
+    {
+      "path": "source_13/file_2.json",
+      "size": 38
+    },
+    {
       "path": "project_13/src/info.txt",
       "size": 43
     },
     {
       "path": "project_13/info.txt",
       "size": 44
-    },
-    {
-      "path": "project_13/src/utils/info.txt",
-      "size": 49
-    },
-    {
-      "path": "project_13/data/input/info.txt",
-      "size": 50
     }
   ]
 }

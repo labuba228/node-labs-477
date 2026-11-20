@@ -1,0 +1,9 @@
+{
+  "name": "lr21-streams",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №21: Исследование методов работы с потоками в Node.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test-all.js"
+  }
+}

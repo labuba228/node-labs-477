@@ -67,8 +67,10 @@ class CompressTransform extends stream.Transform {
   }
 }
 
-async function copyWithFilter(srcDir, destDir) {
-  await fsPromises.rm(destDir, { recursive: true, force: true });
+async function copyWithFilter(srcDir, destDir, incremental = false) {
+  if (!incremental) {
+    await fsPromises.rm(destDir, { recursive: true, force: true });
+  }
   await fsPromises.mkdir(destDir, { recursive: true });
 
   const files = [];
@@ -86,11 +88,12 @@ async function copyWithFilter(srcDir, destDir) {
   await collect(srcDir);
 
   console.log(`\n📂 Исходная директория: ${path.basename(srcDir)}`);
-  console.log(`📂 Директория назначения: ${path.basename(destDir)}`);
+  console.log(`📂 Директория назначения: ${path.basename(destDir)} (режим: ${incremental ? 'Инкрементальный [Варианты 11-15]' : 'Полный'})`);
   console.log(`📋 Обнаружено файлов: ${files.length}`);
 
   let streamedCount = 0;
   let normalCount = 0;
+  let skippedCount = 0;
   let totalBytes = 0;
 
   for (let idx = 0; idx < files.length; idx++) {
@@ -101,6 +104,16 @@ async function copyWithFilter(srcDir, destDir) {
 
     const ext = path.extname(srcFile).toLowerCase();
     const stat = await fsPromises.stat(srcFile);
+
+    // Инкрементальное копирование: если файл не изменялся, пропускаем
+    if (incremental && fs.existsSync(destFile)) {
+      const destStat = await fsPromises.stat(destFile);
+      if (destStat.size === stat.size && Math.abs(destStat.mtimeMs - stat.mtimeMs) < 1000) {
+        skippedCount++;
+        continue;
+      }
+    }
+
     totalBytes += stat.size;
 
     if (stat.size > 1024 * 1024) {
@@ -126,13 +139,17 @@ async function copyWithFilter(srcDir, destDir) {
     }
   }
 
-  console.log(`\n⏳ Прогресс копирования: ${files.length}/${files.length} файлов`);
+  const copiedCount = streamedCount + normalCount;
+  console.log(`\n⏳ Прогресс копирования: ${copiedCount}/${files.length} файлов скопировано (пропущено без изменений: ${skippedCount})`);
   console.log('✅ Копирование завершено!');
   console.log('📊 Статистика:');
-  console.log(`- Скопировано файлов: ${files.length}`);
+  console.log(`- Скопировано файлов: ${copiedCount}`);
+  if (incremental) {
+    console.log(`- Пропущено без изменений (инкрементально): ${skippedCount} файлов`);
+  }
   console.log(`- Потоковое копирование: ${streamedCount} файлов`);
   console.log(`- Обычное копирование: ${normalCount} файлов`);
-  console.log(`- Общий размер: ${(totalBytes / (1024 * 1024)).toFixed(2)} МБ`);
+  console.log(`- Скопировано данных: ${(totalBytes / (1024 * 1024)).toFixed(2)} МБ`);
 }
 
 async function syncAndReport(srcDir, destDir, reportPath) {
@@ -214,7 +231,17 @@ async function main() {
   const reportFile = path.resolve(process.cwd(), `sync_report_${CONFIG.variant}.txt`);
 
   await createTestStructure(sourceDir);
-  await copyWithFilter(sourceDir, backupDir);
+  console.log('\n--- 1. Первоначальное резервное копирование ---');
+  await copyWithFilter(sourceDir, backupDir, false);
+
+  console.log('\n--- 2. Демонстрация инкрементального копирования (Варианты 11-15) ---');
+  // Изменяем один существующий файл в источнике
+  const modFile = path.join(sourceDir, 'file_2.json');
+  await fsPromises.appendFile(modFile, '\n// Modified line for incremental test');
+  // И запускаем инкрементальное копирование
+  await copyWithFilter(sourceDir, backupDir, true);
+
+  console.log('\n--- 3. Синхронизация и отчет ---');
   await syncAndReport(sourceDir, backupDir, reportFile);
 }
 

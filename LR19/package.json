@@ -1,0 +1,9 @@
+{
+  "name": "lr19-events",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №19: Исследование методов работы модуля Events",
+  "type": "module",
+  "scripts": {
+    "test": "node test-all.js"
+  }
+}

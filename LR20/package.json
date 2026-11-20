@@ -1,0 +1,10 @@
+{
+  "name": "lr20-http",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №20: Исследование методов управления маршрутами с использованием объекта HTTP Request",
+  "type": "module",
+  "scripts": {
+    "start": "node http-server.js",
+    "test": "node test-all.js"
+  }
+}

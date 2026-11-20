@@ -1,0 +1,9 @@
+{
+  "name": "lr18-os",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №18: Исследование методов работы модуля OS",
+  "type": "module",
+  "scripts": {
+    "test": "node test-all.js"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "lr17-cli",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №17: Исследование методов создания CLI-приложений",
+  "type": "module",
+  "bin": {
+    "my-cli": "./my-cli.js"
+  },
+  "scripts": {
+    "test": "node test-all.js"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^9.3.2",
+    "chalk": "^5.3.0",
+    "ora": "^8.1.0",
+    "cli-progress": "^3.12.0"
+  }
+}

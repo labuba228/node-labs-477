@@ -82,14 +82,7 @@ export function createServer() {
           const buffer = Buffer.concat(chunks);
           const contentType = req.headers['content-type'] || '';
           if (contentType.includes('application/json')) {
-            // Защита от path traversal
-    if (req.url.includes('..') || pathname.includes('secret.txt')) {
-      res.writeHead(403, { 'Content-Type': 'text/plain' });
-      res.end('403 Forbidden');
-      return;
-    }
-
-    try {
+            try {
               resolve(JSON.parse(buffer.toString('utf-8')));
             } catch {
               reject({ status: 400, message: 'Invalid JSON' });
