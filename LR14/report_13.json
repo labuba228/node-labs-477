@@ -1,11 +1,11 @@
 {
   "variant": 13,
   "analyzedPath": ".",
-  "date": "2026-11-20T12:38:13.902Z",
+  "date": "2026-11-20T12:40:22.680Z",
   "summary": {
-    "totalFiles": 0,
-    "totalDirs": 95,
-    "totalSizeBytes": 0
+    "totalFiles": 49,
+    "totalDirs": 19,
+    "totalSizeBytes": 5769404
   },
   "extensions": {
     ".txt": {
@@ -14,11 +14,11 @@
     },
     ".json": {
       "count": 14,
-      "bytes": 6675
+      "bytes": 6659
     },
     ".js": {
       "count": 13,
-      "bytes": 1283570
+      "bytes": 1283742
     }
   },
   "top5Largest": [

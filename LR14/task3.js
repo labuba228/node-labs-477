@@ -9,6 +9,9 @@ async function scanDirectory(targetDir, statsResult) {
   const entries = await fs.readdir(targetDir, { withFileTypes: true });
 
   for (const entry of entries) {
+    if (entry.name === '.git' || entry.name === 'node_modules') {
+      continue;
+    }
     const fullPath = path.join(targetDir, entry.name);
     if (entry.isDirectory()) {
       statsResult.totalDirs++;
@@ -22,6 +25,9 @@ async function scanDirectory(targetDir, statsResult) {
       if (!allowedExts.includes(ext)) {
         continue;
       }
+      statsResult.totalFiles++;
+      statsResult.totalSizeBytes += fileStat.size;
+
       if (!statsResult.extensions[ext]) {
         statsResult.extensions[ext] = { count: 0, bytes: 0 };
       }
