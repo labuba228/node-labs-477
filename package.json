@@ -1,0 +1,42 @@
+{
+  "name": "node-labs-solutions",
+  "version": "1.0.0",
+  "description": "Лабораторные работы по Node.js (14-24). Студент: Куксов Александр Денисович, Группа 477, Вариант 13",
+  "type": "module",
+  "scripts": {
+    "test:lr14": "cd LR14 && node task1.js && node task2.js && node task3.js && node task4.js && node task5.js",
+    "test:lr15": "cd LR15 && node test-all.js",
+    "test:lr16": "cd LR16 && node test-all.js",
+    "test:lr17": "cd LR17 && node test-all.js",
+    "test:lr18": "cd LR18 && node test-all.js",
+    "test:lr19": "cd LR19 && node test-all.js",
+    "test:lr20": "cd LR20 && node test-all.js",
+    "test:lr21": "cd LR21 && node test-all.js",
+    "test:lr22": "cd LR22 && node test-all.js",
+    "test:lr23": "cd LR23 && node test-all.js",
+    "test:lr24": "cd LR24 && node test-all.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "@koa/router": "^13.1.0",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.1.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "inquirer": "^9.3.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.15.3",
+    "koa-bodyparser": "^4.4.1",
+    "mongodb": "^6.9.0",
+    "mysql2": "^3.11.3",
+    "ora": "^8.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ws": "^8.18.0"
+  }
+}

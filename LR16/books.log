@@ -1,0 +1,14 @@
+[2026-11-20 10:38:11] GET / 200 - 22ms
+[2026-11-20 10:38:11] GET /about 200 - 0ms
+[2026-11-20 10:38:11] POST /api/books 201 - 1ms
+[2026-11-20 10:38:11] GET /api/books?author=%D0%9A%D1%83%D0%BA%D1%81%D0%BE%D0%B2 200 - 1ms
+[2026-11-20 10:38:11] GET /api/books/stats 200 - 0ms
+[2026-11-20 10:38:11] GET /error 500 - 1ms
+[2026-11-20 10:38:11] POST /auth/login 200 - 5ms
+[2026-11-20 10:44:38] GET / 200 - 22ms
+[2026-11-20 10:44:38] GET /about 200 - 1ms
+[2026-11-20 10:44:38] POST /api/books 201 - 1ms
+[2026-11-20 10:44:38] GET /api/books?author=%D0%9A%D1%83%D0%BA%D1%81%D0%BE%D0%B2 200 - 0ms
+[2026-11-20 10:44:38] GET /api/books/stats 200 - 0ms
+[2026-11-20 10:44:38] GET /error 500 - 1ms
+[2026-11-20 10:44:38] POST /auth/login 200 - 2ms

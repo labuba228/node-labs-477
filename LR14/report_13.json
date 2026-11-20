@@ -1,0 +1,68 @@
+{
+  "variant": 13,
+  "analyzedPath": ".",
+  "date": "2026-11-20T10:44:36.527Z",
+  "summary": {
+    "totalFiles": 0,
+    "totalDirs": 19,
+    "totalSizeBytes": 0
+  },
+  "extensions": {
+    ".txt": {
+      "count": 22,
+      "bytes": 4479003
+    },
+    ".json": {
+      "count": 12,
+      "bytes": 6550
+    },
+    ".js": {
+      "count": 13,
+      "bytes": 1282029
+    }
+  },
+  "top5Largest": [
+    {
+      "path": "data_13.txt",
+      "size": 2978242
+    },
+    {
+      "path": "filtered_gt500_13.txt",
+      "size": 1498545
+    },
+    {
+      "path": "source_13/subdir2/file_1.js",
+      "size": 1258291
+    },
+    {
+      "path": "task5.js",
+      "size": 8390
+    },
+    {
+      "path": "task4.js",
+      "size": 4990
+    }
+  ],
+  "top5Smallest": [
+    {
+      "path": "source_13/new_added_item.txt",
+      "size": 11
+    },
+    {
+      "path": "project_13/src/info.txt",
+      "size": 43
+    },
+    {
+      "path": "project_13/info.txt",
+      "size": 44
+    },
+    {
+      "path": "project_13/src/utils/info.txt",
+      "size": 49
+    },
+    {
+      "path": "project_13/data/input/info.txt",
+      "size": 50
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+// Content for file_12.txt   with   extra    spaces   
+console.log(12);  

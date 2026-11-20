@@ -1,0 +1,122 @@
+[
+  {
+    "fileName": "file_1.js",
+    "path": "subdir2/file_1.js",
+    "size": 1258291,
+    "ext": ".js"
+  },
+  {
+    "fileName": "file_2.json",
+    "path": "subdir3/file_2.json",
+    "size": 73,
+    "ext": ".json"
+  },
+  {
+    "fileName": "file_3.jpg",
+    "path": "subdir1/file_3.jpg",
+    "size": 4096,
+    "ext": ".jpg"
+  },
+  {
+    "fileName": "file_4.png",
+    "path": "file_4.png",
+    "size": 5120,
+    "ext": ".png"
+  },
+  {
+    "fileName": "file_5.gif",
+    "path": "subdir3/file_5.gif",
+    "size": 6144,
+    "ext": ".gif"
+  },
+  {
+    "fileName": "file_6.txt",
+    "path": "subdir1/file_6.txt",
+    "size": 72,
+    "ext": ".txt"
+  },
+  {
+    "fileName": "file_7.js",
+    "path": "subdir2/file_7.js",
+    "size": 71,
+    "ext": ".js"
+  },
+  {
+    "fileName": "file_8.json",
+    "path": "file_8.json",
+    "size": 73,
+    "ext": ".json"
+  },
+  {
+    "fileName": "file_9.jpg",
+    "path": "subdir1/file_9.jpg",
+    "size": 10240,
+    "ext": ".jpg"
+  },
+  {
+    "fileName": "file_10.png",
+    "path": "subdir2/file_10.png",
+    "size": 11264,
+    "ext": ".png"
+  },
+  {
+    "fileName": "file_11.gif",
+    "path": "subdir3/file_11.gif",
+    "size": 12288,
+    "ext": ".gif"
+  },
+  {
+    "fileName": "file_12.txt",
+    "path": "file_12.txt",
+    "size": 74,
+    "ext": ".txt"
+  },
+  {
+    "fileName": "file_13.js",
+    "path": "subdir2/file_13.js",
+    "size": 73,
+    "ext": ".js"
+  },
+  {
+    "fileName": "file_14.json",
+    "path": "subdir3/file_14.json",
+    "size": 75,
+    "ext": ".json"
+  },
+  {
+    "fileName": "file_15.jpg",
+    "path": "subdir1/file_15.jpg",
+    "size": 16384,
+    "ext": ".jpg"
+  },
+  {
+    "fileName": "file_16.png",
+    "path": "file_16.png",
+    "size": 17408,
+    "ext": ".png"
+  },
+  {
+    "fileName": "file_17.gif",
+    "path": "subdir3/file_17.gif",
+    "size": 18432,
+    "ext": ".gif"
+  },
+  {
+    "fileName": "file_18.txt",
+    "path": "subdir1/file_18.txt",
+    "size": 74,
+    "ext": ".txt"
+  },
+  {
+    "fileName": "file_19.js",
+    "path": "subdir2/file_19.js",
+    "size": 73,
+    "ext": ".js"
+  },
+  {
+    "fileName": "file_20.json",
+    "path": "file_20.json",
+    "size": 75,
+    "ext": ".json"
+  }
+]

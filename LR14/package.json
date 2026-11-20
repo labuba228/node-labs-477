@@ -1,0 +1,17 @@
+{
+  "name": "lr14-filesystem",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Лабораторная работа №14: Исследование методов работы с файловой системой средствами Node.js",
+  "main": "task1.js",
+  "scripts": {
+    "task1": "node task1.js",
+    "task2": "node task2.js",
+    "task3": "node task3.js",
+    "task4": "node task4.js",
+    "task5": "node task5.js"
+  },
+  "keywords": ["node", "fs", "streams", "filesystem"],
+  "author": "Иванов Иван (ББМО-01-23)",
+  "license": "ISC"
+}
